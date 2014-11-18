@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MechanicalArm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +16,66 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41w-Nt-aJQ" customClass="MechanicalArmView" customModule="MechanicalArm" customModuleProvider="target">
+                                <rect key="frame" x="6" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-90" maxValue="90" translatesAutoresizingMaskIntoConstraints="NO" id="QSx-db-mRm">
+                                        <rect key="frame" x="6" y="562" width="579" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="UAS-wX-DyH"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="kEl-RX-mRa"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-90" maxValue="90" translatesAutoresizingMaskIntoConstraints="NO" id="NTd-sR-Fyg">
+                                        <rect key="frame" x="6" y="524" width="579" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="bOD-iL-DAM"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="F6T-9R-Gag"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-90" maxValue="90" translatesAutoresizingMaskIntoConstraints="NO" id="LXN-AH-ntM">
+                                        <rect key="frame" x="6" y="486" width="579" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="HzA-m2-Mhe"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="5WO-4g-lY5"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="QSx-db-mRm" firstAttribute="leading" secondItem="41w-Nt-aJQ" secondAttribute="leading" constant="8" id="Gfx-mU-y9p"/>
+                                    <constraint firstAttribute="trailing" secondItem="LXN-AH-ntM" secondAttribute="trailing" constant="17" id="MIH-zQ-ole"/>
+                                    <constraint firstAttribute="trailing" secondItem="QSx-db-mRm" secondAttribute="trailing" constant="17" id="a9N-To-6JS"/>
+                                    <constraint firstItem="LXN-AH-ntM" firstAttribute="leading" secondItem="41w-Nt-aJQ" secondAttribute="leading" constant="8" id="cDB-Ao-5aQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="QSx-db-mRm" secondAttribute="bottom" constant="8" id="cPb-Eb-vqO"/>
+                                    <constraint firstItem="NTd-sR-Fyg" firstAttribute="top" secondItem="LXN-AH-ntM" secondAttribute="bottom" constant="8" id="dLc-j0-GY7"/>
+                                    <constraint firstAttribute="trailing" secondItem="NTd-sR-Fyg" secondAttribute="trailing" constant="17" id="jSe-xf-DTd"/>
+                                    <constraint firstItem="QSx-db-mRm" firstAttribute="top" secondItem="NTd-sR-Fyg" secondAttribute="bottom" constant="8" id="vWd-TR-Uyq"/>
+                                    <constraint firstItem="NTd-sR-Fyg" firstAttribute="leading" secondItem="41w-Nt-aJQ" secondAttribute="leading" constant="8" id="xBN-7N-x0P"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="41w-Nt-aJQ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="3xJ-fX-Xon"/>
+                            <constraint firstItem="41w-Nt-aJQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-10" id="ABs-5V-PF8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="41w-Nt-aJQ" secondAttribute="trailing" constant="-22" id="Amf-QA-5ZR"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="41w-Nt-aJQ" secondAttribute="bottom" id="nGs-zK-HcG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="elbowSlider" destination="NTd-sR-Fyg" id="gHw-N0-1nL"/>
+                        <outlet property="mechArmView" destination="41w-Nt-aJQ" id="6NV-pr-GqI"/>
+                        <outlet property="shoulderSlider" destination="LXN-AH-ntM" id="mYd-j4-EXr"/>
+                        <outlet property="wristSlider" destination="QSx-db-mRm" id="qXW-VF-mB2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

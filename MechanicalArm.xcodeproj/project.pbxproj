@@ -13,6 +13,8 @@
 		E426192B1A1BB13A005DE753 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E426192A1A1BB13A005DE753 /* Images.xcassets */; };
 		E426192E1A1BB13A005DE753 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E426192C1A1BB13A005DE753 /* LaunchScreen.xib */; };
 		E426193A1A1BB13A005DE753 /* MechanicalArmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42619391A1BB13A005DE753 /* MechanicalArmTests.swift */; };
+		E42619461A1BB1D2005DE753 /* MechanicalArmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42619451A1BB1D2005DE753 /* MechanicalArmView.swift */; };
+		E42619481A1BB296005DE753 /* StyleKitName.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42619471A1BB296005DE753 /* StyleKitName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		E42619331A1BB13A005DE753 /* MechanicalArmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MechanicalArmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42619381A1BB13A005DE753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E42619391A1BB13A005DE753 /* MechanicalArmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MechanicalArmTests.swift; sourceTree = "<group>"; };
+		E42619451A1BB1D2005DE753 /* MechanicalArmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MechanicalArmView.swift; sourceTree = "<group>"; };
+		E42619471A1BB296005DE753 /* StyleKitName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleKitName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +81,14 @@
 		E42619201A1BB13A005DE753 /* MechanicalArm */ = {
 			isa = PBXGroup;
 			children = (
+				E42619471A1BB296005DE753 /* StyleKitName.swift */,
 				E42619231A1BB13A005DE753 /* AppDelegate.swift */,
 				E42619251A1BB13A005DE753 /* ViewController.swift */,
 				E42619271A1BB13A005DE753 /* Main.storyboard */,
 				E426192A1A1BB13A005DE753 /* Images.xcassets */,
 				E426192C1A1BB13A005DE753 /* LaunchScreen.xib */,
 				E42619211A1BB13A005DE753 /* Supporting Files */,
+				E42619451A1BB1D2005DE753 /* MechanicalArmView.swift */,
 			);
 			path = MechanicalArm;
 			sourceTree = "<group>";
@@ -212,8 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42619461A1BB1D2005DE753 /* MechanicalArmView.swift in Sources */,
 				E42619261A1BB13A005DE753 /* ViewController.swift in Sources */,
 				E42619241A1BB13A005DE753 /* AppDelegate.swift in Sources */,
+				E42619481A1BB296005DE753 /* StyleKitName.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

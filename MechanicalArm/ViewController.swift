@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mechArmView: MechanicalArmView!
+    @IBOutlet weak var shoulderSlider: UISlider!
+    @IBOutlet weak var elbowSlider: UISlider!
+    @IBOutlet weak var wristSlider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +25,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func sliderChanged(sender: AnyObject) {
+        mechArmView.shoulderAngle = CGFloat(shoulderSlider.value)
+        mechArmView.elbowAngle = CGFloat(elbowSlider.value)
+        mechArmView.wristAngle = CGFloat(wristSlider.value)
+        
+        mechArmView.setNeedsDisplay()
+    }
 
 }
 
